@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню | SunBite</title>
+    <link rel="stylesheet" href="menu.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="SunBite Logo" class="logo-img">
+        <span class="logo-text">SunBite</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="home.html">Начало</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="gallery.html">Галерия</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+    </ul>
+</nav>
+
+<!-- MENU SECTION -->
+<section class="menu-section">
+    <h2>Нашето Меню</h2>
+    <div class="menu-grid">
+
+        <div class="menu-item">
+			<img src="food1.jpg" alt="Паста">
+			<h3>🍝 Паста – 14.99лв</h3>
+			<button class="toggle-desc">Виж съставки</button>
+			<ul class="description">
+				<li>Спагети</li>
+				<li>Домати</li>
+				<li>Босилек</li>
+				<li>Чесън</li>
+				<li>Пармезан</li>
+				<li>Зехтин</li>
+			</ul>
+		</div>
+
+        <div class="menu-item">
+            <img src="beaf.jpg" alt="Телешки стек">
+            <h3>🥩 Телешки стек – 24.99лв</h3>
+            <button class="toggle-desc">Виж съставки</button>
+            <p class="description">Телешко месо, сол, черен пипер, масло, гарнитура зеленчуци.</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="salad_cesar.jpg" alt="Салата Цезар">
+            <h3>🥗 Салата Цезар – 11.99лв</h3>
+            <button class="toggle-desc">Виж съставки</button>
+            <p class="description">Маруля, крутони, пармезан, пилешко филе, Цезар дресинг.</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="cake.jpg" alt="Домашна торта">
+            <h3>🍰 Торта Шоне – 8.99лв</h3>
+            <button class="toggle-desc">Виж съставки</button>
+            <p class="description">Бисквити, шоколадов мус, сметана, пресни плодове.</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="fish.jpg" alt="Сьомга на скара">
+            <h3>🐟 Сьомга – 21.99лв</h3>
+            <button class="toggle-desc">Виж съставки</button>
+            <p class="description">Сьомга, лимон, зехтин, подправки, гарнитура зеленчуци.</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="rizo.jpg" alt="Ризото с гъби">
+            <h3>🍚 Ризото с гъби – 15.99лв</h3>
+            <button class="toggle-desc">Виж съставки</button>
+            <p class="description">Ориз Арборио, гъби, лук, бяло вино, пармезан, масло.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SunBite Restaurant | Всички права са запазени</p>
+</footer>
+
+<!-- JS за акордеона -->
+<script>
+    const buttons = document.querySelectorAll('.toggle-desc');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const desc = btn.nextElementSibling;
+            desc.classList.toggle('show');
+            btn.textContent = desc.classList.contains('show') ? 'Скрий съставки' : 'Виж съставки';
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+	font-family: italic;
+	font-size: 25px;
+}	
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* разстояние между картинката и текста */
+	font-family: italic;
+	font: bold;
+	font-size: 40px;
+}
+.logo-img {
+    width: 80px; /* регулируем размер на логото */
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px; /* леко заобляне, ако искаш */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f4b400;
+}
+
+/* HERO */
+header {
+    padding-top: 80px; /* добавен padding, за да не се покрива от navbar */
+    height: calc(100vh - 80px); /* корекция за височината */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('background.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-direction: column; /* за х1, п и бутон */
+}
+
+.hero h1 {
+    font-size: 65px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 14px 35px;
+    background: #f4b400;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d99900;
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 10%;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* SPECIALS */
+.specials {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.specials h2 {
+	padding: 30px 5%;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 20px 20px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
